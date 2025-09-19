@@ -1,0 +1,14 @@
+    # fly.toml file generated for my-telegram-bot
+
+    app = "atmttmbot"  # <-- این نام را بعداً در Fly.io انتخاب خواهیم کرد
+    primary_region = "fra" # Frankfurt, Germany
+
+    [build]
+      builder = "paketobuildpacks/builder:base"
+
+    [http_service]
+      internal_port = 8080
+      force_https = true
+      auto_stop_machines = true
+      auto_start_machines = true
+      min_machines_running = 0 # برای پلن رایگان، 0 یا 1 بگذارید
